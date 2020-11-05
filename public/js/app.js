@@ -148,8 +148,62 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "App.vue"
+  name: "App.vue",
+  data: function data() {
+    return {
+      items: [{
+        text: 'Dashboard',
+        disabled: false,
+        href: 'breadcrumbs_dashboard'
+      }, {
+        text: 'Link 1',
+        disabled: false,
+        href: 'breadcrumbs_link_1'
+      }, {
+        text: 'Link 2',
+        disabled: true,
+        href: 'breadcrumbs_link_2'
+      }]
+    };
+  }
 });
 
 /***/ }),
@@ -1253,50 +1307,105 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "v-app",
+    "div",
     [
       _c(
-        "v-card",
-        { staticClass: "mx-auto", attrs: { "max-width": "344", outlined: "" } },
+        "v-app",
         [
           _c(
-            "v-list-item",
-            { attrs: { "three-line": "" } },
+            "v-card",
+            {
+              staticClass: "mx-auto",
+              attrs: { "max-width": "344", outlined: "" }
+            },
             [
               _c(
-                "v-list-item-content",
+                "v-list-item",
+                { attrs: { "three-line": "" } },
                 [
-                  _c("div", { staticClass: "overline mb-4" }, [
-                    _vm._v("OVERLINE")
-                  ]),
+                  _c(
+                    "v-list-item-content",
+                    [
+                      _c("div", { staticClass: "overline mb-4" }, [
+                        _vm._v("OVERLINE")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "v-list-item-title",
+                        { staticClass: "headline mb-1" },
+                        [_vm._v("Headline 5")]
+                      ),
+                      _vm._v(" "),
+                      _c("v-list-item-subtitle", [
+                        _vm._v("Greyhound divisely hello coldly fonwderfully")
+                      ])
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
-                  _c("v-list-item-title", { staticClass: "headline mb-1" }, [
-                    _vm._v("Headline 5")
-                  ]),
-                  _vm._v(" "),
-                  _c("v-list-item-subtitle", [
-                    _vm._v("Greyhound divisely hello coldly fonwderfully")
-                  ])
+                  _c("v-list-item-avatar", {
+                    attrs: { tile: "", size: "80", color: "black" }
+                  })
                 ],
                 1
               ),
               _vm._v(" "),
-              _c("v-list-item-avatar", {
-                attrs: { tile: "", size: "80", color: "grey" }
-              })
+              _c(
+                "v-card-actions",
+                [
+                  _c("v-btn", { attrs: { text: "" } }, [_vm._v("Button")]),
+                  _vm._v(" "),
+                  _c("v-btn", { attrs: { text: "" } }, [_vm._v("Button")])
+                ],
+                1
+              )
             ],
             1
           ),
           _vm._v(" "),
           _c(
-            "v-card-actions",
+            "v-alert",
+            { attrs: { border: "top", color: "red lighten-2", dark: "" } },
             [
-              _c("v-btn", { attrs: { text: "" } }, [_vm._v("Button")]),
-              _vm._v(" "),
-              _c("v-btn", { attrs: { text: "" } }, [_vm._v("Button")])
-            ],
-            1
-          )
+              _vm._v(
+                "\n            I'm an alert with a top border and red color\n        "
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "v-alert",
+            { attrs: { border: "right", color: "blue-grey", dark: "" } },
+            [
+              _vm._v(
+                "\n            I'm an alert with a right border and blue-grey color\n        "
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "v-alert",
+            { attrs: { border: "bottom", color: "pink darken-1", dark: "" } },
+            [
+              _vm._v(
+                "\n            I'm an alert with a bottom border and pink color\n        "
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "v-alert",
+            { attrs: { border: "left", color: "indigo", dark: "" } },
+            [
+              _vm._v(
+                "\n            I'm an alert with a border left type info\n        "
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c("v-breadcrumbs", { attrs: { items: _vm.items, divider: "-" } }),
+          _vm._v(" "),
+          _c("v-breadcrumbs", { attrs: { items: _vm.items, divider: "." } })
         ],
         1
       )
